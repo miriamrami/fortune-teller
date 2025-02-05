@@ -1,0 +1,35 @@
+{
+  "name": "fortune-teller",
+  "version": "1.0.0",
+  "description": "A React app for fortune telling",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miriamrami/fortune-teller.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miriamrami/fortune-teller/issues"
+  },
+  "homepage": "https://miriamrami.github.io/fortune-teller",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
+
+
