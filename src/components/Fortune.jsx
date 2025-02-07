@@ -1,15 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {fetchAdvice} from '../api';
+import { useNavigate } from "react-router-dom";
 //**import css files later */
 
 function Fortune(){
     const [advice, setAdvice] = useState('Click for a fortune~');
+    const navigate = useNavigate(); //initializing
 
     const handleFortuneClick = async () => {
         const newAdvice = await fetchAdvice();
         setAdvice(newAdvice);
     };
 
+    const handleBackHome = () => {
+        navigate('/'); //Heading back to the home page
+    }
 
 
     return (
@@ -23,6 +28,9 @@ function Fortune(){
             </div>
             <button className="fortune-button" onClick={handleFortuneClick}>
                 See Your Fortune
+            </button>
+            <button className="back-button" onClick={handleBackHome}>
+                Back Home
             </button>
         </div>
     );
