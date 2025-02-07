@@ -1,5 +1,5 @@
-import React from "react";
-import {fetchAdvice} from '..api';
+import React, {useState} from "react";
+import {fetchAdvice} from '';
 //**import css files later */
 
 function Fortune(){
