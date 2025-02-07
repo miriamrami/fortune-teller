@@ -10,9 +10,13 @@ function App() {
     setShowFortune(true);
   };
 
+  const backHome =  () => {
+    setShowFortune(false);
+  }
+
   return (
     <div className="app">
-      {showFortune ? <Fortune /> : <Home onAccept={handleAccept} />}
+      {showFortune ? <Fortune backHome={backHome}/> : <Home onAccept={handleAccept} />}
     </div>
   );
 }

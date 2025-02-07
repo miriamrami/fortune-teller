@@ -3,20 +3,14 @@ import {fetchAdvice} from '../api';
 import { useNavigate } from "react-router-dom";
 //**import css files later */
 
-function Fortune(){
+function Fortune({backHome}){
     const [advice, setAdvice] = useState('Click for a fortune~');
-    const navigate = useNavigate(); //initializing
-
+    
     const handleFortuneClick = async () => {
         const newAdvice = await fetchAdvice();
         setAdvice(newAdvice);
     };
-
-    const handleBackHome = () => {
-        navigate('/'); //Heading back to the home page
-    }
-
-
+    
     return (
 
         <div className="fortune-page">
@@ -29,7 +23,7 @@ function Fortune(){
             <button className="fortune-button" onClick={handleFortuneClick}>
                 See Your Fortune
             </button>
-            <button className="back-button" onClick={handleBackHome}>
+            <button className="back-button" onClick={backHome}>
                 Back Home
             </button>
         </div>
